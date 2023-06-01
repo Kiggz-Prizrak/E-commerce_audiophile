@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 
-// import { getAllArticles, getOneArticles } from "../api";
+import { getAllArticles,getArticlesFromCategory ,getOneArticles } from "../api";
 
 import Root from "./Root";
 
@@ -20,9 +20,9 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        // loader: () => {
-        //   return getAllArticles();
-        // },
+        loader: () => {
+          return getAllArticles();
+        },
       },
       {
         path: "/checkout",
@@ -31,16 +31,16 @@ const router = createBrowserRouter([
       {
         path: "/:category",
         element: <Category />,
-        // loader: () => {
-        //   return getCategoryArticles();
-        // },
+        loader: ({ params }) => {
+          return getArticlesFromCategory(params.category);
+        },
       },
       {
         path: "/article/:id",
         element: <Article />,
-        // loader: ({ params }) => {
-        //   return getOneArticles(params.id);
-        // },
+        loader: ({ params }) => {
+          return getOneArticles(params.id);
+        },
       },
     ],
   },
