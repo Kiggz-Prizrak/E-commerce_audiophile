@@ -1,3 +1,79 @@
+* {
+  font-family: "Manrope", sans-serif;
+}
+
 h1 {
-  
+  font-size: 56px;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  line-height: 58px;
+  color: black;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 1.5px;
+  line-height: 44px;
+  color: black;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 1.15px;
+  line-height: 36px;
+  color: black;
+}
+
+h4 {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  line-height: 38px;
+  color: black;
+}
+
+h5 {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 1.7px;
+  line-height: 33px;
+  color: black;
+}
+
+h6 {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 1.3px;
+  line-height: 24px;
+  color: black;
+}
+
+p {
+  font-weight: medium;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.overline {
+  color: $primary_color;
+  font-size: 14px;
+  text-transform: capitalize;
+  line-height: 19px;
+  letter-spacing: 10px;
+}
+.subtitle {
+  color: $primary_color;
+  font-weight: bold;
+  font-size: 13px;
+  text-transform: capitalize;
+  line-height: 24px;
+  letter-spacing: 1px;
 }
