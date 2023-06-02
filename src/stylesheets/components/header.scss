@@ -2,10 +2,9 @@ header {
   background-color: black;
   width: 100%;
   @include flex_midle;
-  height: 97px;
 
   button {
-    background-color: transparent ;
+    background-color: transparent;
     border: none;
   }
 }
@@ -13,8 +12,19 @@ header {
 .header-container {
   @include max_width;
   @include flex_separation;
+  height: 97px;
+  border-bottom: solid 1px #979797;
 }
 
 .cart-button {
   display: none;
+}
+
+nav {
+  @include flex_separation;
+  width: 100%;
+  max-width: 430px;
+  .active {
+    border-bottom: solid 1px white;
+  }
 }
