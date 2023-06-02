@@ -1,0 +1,34 @@
+footer {
+  background-color: $background_black;
+  @include flex_midle;
+  max-height: 365px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  span {
+    position: absolute;
+    top : -12px
+  }
+  
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1440px; 
+  margin: 24px
+}
+
+.footer-nav-container {
+  @include flex_separation;
+}
+
+.footer-description {
+  @include flex_separation
+}
+
+.footer-description-text {
+  color: white;
+  opacity: 50%;
+  max-width: 540px;
+  width: 100%;
+}

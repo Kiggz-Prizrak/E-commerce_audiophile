@@ -1,0 +1,8 @@
+nav {
+  @include flex_separation;
+  width: 100%;
+  max-width: 430px;
+  .active {
+    border-bottom: solid 1px white;
+  }
+}
