@@ -2,6 +2,8 @@ import { useLoaderData } from "react-router-dom";
 
 import CategorySection from "../components/CategorySection";
 
+import Button2 from "../components/button/Button2";
+
 const Home = () => {
   const articlesList = useLoaderData();
   const newArticles = articlesList.filter((e) => e.new);
@@ -13,6 +15,10 @@ const Home = () => {
     <div className="home-container">
       <div className="home-content">
         <CategorySection />
+
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
     </div>
   );

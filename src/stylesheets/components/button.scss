@@ -1,7 +1,28 @@
 .Button1 {
+  background-color: $primary_color;
+  border: none;
+  border-radius: 0;
+  max-width: 160px;
+  width: 100%;
+  height: 48px;
+  color: white;
+
+  &:hover {
+    background-color: $secondary_color;
+  }
 }
 
 .Button2 {
+  background-color: transparent;
+  border: solid 1px black;
+  border-radius: 0;
+  max-width: 160px;
+  width: 100%;
+  height: 48px;
+  &:hover {
+    background-color: black;
+    color: white;
+  }
 }
 
 .Button3 {
@@ -12,14 +33,9 @@
   max-width: 57px;
   width: 100%;
   @include flex_separation;
-
-  a {
-    color: black;
-    opacity: 50%;
-    text-shadow: 2px 16px 18px rgba(0, 0, 0, 0.44);
-  }
-  a:hover {
+  color: #00000065;
+  text-shadow: 2px 16px 18px rgba(0, 0, 0, 0.44);
+  &:hover {
     color: $primary_color;
-    opacity: 100%;
   }
 }

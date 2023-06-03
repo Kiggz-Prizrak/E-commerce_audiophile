@@ -2,11 +2,6 @@
   font-family: "Manrope", sans-serif;
   text-decoration: none;
   list-style: none;
-  
-}
-
-ul {
-  padding: 0;
 }
 
 h1 {
@@ -80,9 +75,8 @@ a {
 }
 
 a:hover {
-  color: $primary_color
+  color: $primary_color;
 }
-
 
 .overline {
   color: $primary_color;
@@ -98,4 +92,13 @@ a:hover {
   text-transform: capitalize;
   line-height: 25px;
   letter-spacing: 1px;
+}
+
+button {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
