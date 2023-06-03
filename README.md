@@ -13,7 +13,10 @@ This project is an e-commerce website developed using React with SASS, Redux, Re
 2. Navigate to the project directory.
 3. Run the following command to install the dependencies:
 
-$ npm rund dev
+```
+$ npm install
+$ npm run dev
+```
 
 ## Configuration
 
