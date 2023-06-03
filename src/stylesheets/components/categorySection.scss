@@ -1,0 +1,6 @@
+.categorySection-container {
+  @include flex_separation;
+  width: 100%;
+  flex-wrap: wrap;
+  height: 100%;
+}

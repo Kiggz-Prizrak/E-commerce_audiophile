@@ -12,6 +12,9 @@
   'base/helpers';
 
   @import
+  'components/categorySection',
+  'components/categoryCard',
+  'components/button',
   'components/socialMedias',
   'components/footer',
   'components/nav',
@@ -19,7 +22,10 @@
 
 
   @import
-
   'layout/body';
+
+  @import
+
+  'pages/home';
 
 

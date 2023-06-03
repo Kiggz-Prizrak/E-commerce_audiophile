@@ -1,0 +1,22 @@
+.categoryCard-container {
+  @include flex_midle;
+  flex-direction: column;
+  height: 100%;
+  max-height: 204px;
+  
+  position: relative;
+  max-width: 350px;
+  width: 100%;
+  background-color: $light-grey;
+  border-radius: 8px;
+  img {
+    position: absolute;
+    top: -25%
+  }
+}
+
+.categoryCard-content {
+  position: absolute;
+  bottom: 15%;
+  @include flex_column
+}

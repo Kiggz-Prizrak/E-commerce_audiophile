@@ -1,0 +1,25 @@
+.Button1 {
+}
+
+.Button2 {
+}
+
+.Button3 {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  max-width: 57px;
+  width: 100%;
+  @include flex_separation;
+
+  a {
+    color: black;
+    opacity: 50%;
+    text-shadow: 2px 16px 18px rgba(0, 0, 0, 0.44);
+  }
+  a:hover {
+    color: $primary_color;
+    opacity: 100%;
+  }
+}
