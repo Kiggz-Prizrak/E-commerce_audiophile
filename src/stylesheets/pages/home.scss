@@ -1,6 +1,5 @@
 .home-container {
   width: 100%;
-  height: 100%;
   @include flex_midle;
 }
 .home-content {
@@ -8,5 +7,4 @@
   width: 100%;
   @include flex_midle;
   flex-direction: column;
-  height: 100%;
 }

@@ -17,6 +17,12 @@
     align-items: center;
 }
 
+@mixin flex_arround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 @mixin max_width {
   max-width: 1440px;
   width: 100%;

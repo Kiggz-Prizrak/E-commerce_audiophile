@@ -16,7 +16,7 @@ h1 {
 h2 {
   font-size: 40px;
   font-weight: bold;
-  text-transform: capitalize;
+  text-transform: uppercase;
   letter-spacing: 1.5px;
   line-height: 44px;
   color: black;
@@ -25,7 +25,7 @@ h2 {
 h3 {
   font-size: 32px;
   font-weight: bold;
-  text-transform: capitalize;
+  text-transform: uppercase;
   letter-spacing: 1.15px;
   line-height: 36px;
   color: black;
@@ -34,7 +34,7 @@ h3 {
 h4 {
   font-size: 28px;
   font-weight: bold;
-  text-transform: capitalize;
+  text-transform: uppercase;
   letter-spacing: 2px;
   line-height: 38px;
   color: black;
@@ -43,7 +43,7 @@ h4 {
 h5 {
   font-size: 24px;
   font-weight: bold;
-  text-transform: capitalize;
+  text-transform: uppercase;
   letter-spacing: 1.7px;
   line-height: 33px;
   color: black;
@@ -52,7 +52,7 @@ h5 {
 h6 {
   font-size: 18px;
   font-weight: bold;
-  text-transform: capitalize;
+  text-transform: uppercase;
   letter-spacing: 1.3px;
   line-height: 24px;
   color: black;
@@ -69,7 +69,7 @@ a {
   color: white;
   font-weight: bold;
   font-size: 13px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   line-height: 25px;
   letter-spacing: 1.3px;
 }
@@ -81,7 +81,7 @@ a:hover {
 .overline {
   color: $primary_color;
   font-size: 14px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   line-height: 19px;
   letter-spacing: 10px;
 }
@@ -89,7 +89,7 @@ a:hover {
   color: $primary_color;
   font-weight: bold;
   font-size: 13px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   line-height: 25px;
   letter-spacing: 1px;
 }

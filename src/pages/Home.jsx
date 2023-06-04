@@ -1,24 +1,25 @@
 import { useLoaderData } from "react-router-dom";
 
 import CategorySection from "../components/CategorySection";
+import PresentationSection from "../components/PresentationSection";
+import HomeProductBanner1 from "../components/HomeProductBanner1";
 
-import Button2 from "../components/button/Button2";
+import Button2 from "../components/button/ButtonArrow";
 
 const Home = () => {
   const articlesList = useLoaderData();
   const newArticles = articlesList.filter((e) => e.new);
   const randomNewArticles = newArticles[Math.floor(Math.random() * 3)];
 
-  console.log(newArticles)
+  console.log(newArticles);
 
   return (
     <div className="home-container">
       <div className="home-content">
         <CategorySection />
+        <HomeProductBanner1 />
 
-        <div></div>
-        <div></div>
-        <div></div>
+        <PresentationSection />
       </div>
     </div>
   );
