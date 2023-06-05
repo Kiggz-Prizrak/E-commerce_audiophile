@@ -12,11 +12,14 @@
   'base/helpers';
 
   @import
-  'components/homeHero',
+  'components/categoryArticle',
+  'components/categoryArticlesList',
+  'components/articleDescription',
+  'components/heros',
   'components/homeProductBanner',
   'components/presentationSection',
-  'components/categorySection',
-  'components/categoryCard',
+  'components/categoryMenu',
+  'components/homeCategoryCard',
   'components/button',
   'components/socialMedias',
   'components/footer',

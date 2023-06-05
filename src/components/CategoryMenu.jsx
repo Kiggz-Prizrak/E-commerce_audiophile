@@ -1,4 +1,4 @@
-import CategoryCard from "./CategoryCard";
+import CategoryMenuCard from "./CategoryMenuCard";
 //import.meta.env.VITE_API_HOST
 const headphonesCatImg = ` ${
   import.meta.env.VITE_API_HOST
@@ -12,14 +12,14 @@ const earphonesCatImg = ` ${
   import.meta.env.VITE_API_HOST
 }/images/home/category/earphones-cat.png`;
 
-const CategorySection = () => {
+const CategoryMenu = () => {
   return (
-    <ul className="categorySection-container">
-      <CategoryCard image={headphonesCatImg} category="headphones" />
-      <CategoryCard image={speakerCatImg} category="speakers" />
-      <CategoryCard image={earphonesCatImg} category="earphones" />
+    <ul className="CategoryMenu-container">
+      <CategoryMenuCard image={headphonesCatImg} category="headphones" />
+      <CategoryMenuCard image={speakerCatImg} category="speakers" />
+      <CategoryMenuCard image={earphonesCatImg} category="earphones" />
     </ul>
   );
 };
 
-export default CategorySection;
+export default CategoryMenu;

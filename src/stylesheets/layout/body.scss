@@ -8,3 +8,15 @@ body {
   height: 100%;
   @include flex_column;
 }
+
+.page-container {
+  width: 100%;
+  @include flex_midle;
+  @include flex_column
+}
+.page-content {
+  max-width: 1100px;
+  width: 100%;
+  @include flex_midle;
+  flex-direction: column;
+}

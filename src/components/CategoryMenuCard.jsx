@@ -1,10 +1,10 @@
 import Button2 from "./button/ButtonArrow";
 
-const CategoryCard = ({ image, category }) => {
+const CategoryMenuCard = ({ image, category }) => {
   return (
-    <li className="categoryCard-container">
+    <li className="homeCategoryCard-container">
       <img src={image} alt="" />
-      <div className="categoryCard-content">
+      <div className="homeCategoryCard-content">
         <h6>{category}</h6>
         <Button2 link={category} />
       </div>
@@ -12,4 +12,4 @@ const CategoryCard = ({ image, category }) => {
   );
 };
 
-export default CategoryCard;
+export default CategoryMenuCard;

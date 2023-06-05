@@ -1,11 +1,13 @@
 .homeHero-container {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex_midle;
   background-color: #0e0e0e;  
   height: 729px;
   position: relative;
+
+   h1, p {
+    color: white;
+   }
   picture {
     z-index: 1;
     overflow: hidden;
@@ -18,7 +20,6 @@
       height: 729px;
       object-fit: cover;
     }
-    border-image: linear-gradient(to bottom, rgba(255,255,255,0) 70%, rgba(255,255,255,1) 100%) ;
   }
  
   .homeHero-content {
@@ -28,15 +29,15 @@
   }
   margin-bottom: 5%;
 }
-.homeHero-content-text {
-  max-width: 1100px;
+
+.categoryHero {
+  @include flex_midle;
   width: 100%;
-  max-width: 400px;
-  p {
-    color: white;
-    opacity: 50%;
-  }
-  h1 {
+  padding-top: 97px;
+  background-color: black ;
+  height: 336px;
+  margin-bottom: 5%;
+  h2 {
     color: white;
   }
 }

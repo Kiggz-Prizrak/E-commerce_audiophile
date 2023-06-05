@@ -1,0 +1,23 @@
+.categoryArticle-container {
+  @include flex_separation;
+  width: 100%;
+  margin: 20px 0px;
+
+
+  picture {
+    
+    object-fit: cover;
+    max-width: 540px;
+    max-height: 560px;
+    min-width: 181px;
+    min-height: 215px;
+    width: 100%;
+    height: 100%;
+    ;
+  }
+
+  img {
+    border-radius: 8px;
+    width: 100%;
+  }
+}

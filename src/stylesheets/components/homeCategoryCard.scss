@@ -1,4 +1,4 @@
-.categoryCard-container {
+.homeCategoryCard-container {
   @include flex_midle;
   flex-direction: column;
   margin-top: 60px;
@@ -17,7 +17,7 @@
   }
 }
 
-.categoryCard-content {
+.homeCategoryCard-content {
   position: absolute;
   bottom: 10%;
   @include flex_column
