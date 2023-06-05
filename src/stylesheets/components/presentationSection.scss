@@ -1,3 +1,20 @@
 .presentationSection-container {
-  @include flex_separation
+  @include flex_separation;
+  flex-wrap: wrap;
+  margin: 20px 0px;
+  width: 100%;
+  .presentationSection-text {
+    mark {
+      background: none;
+      color: $primary_color;
+    }
+    width: 100%;
+    max-width: 445px;
+    height: 295px;
+  }
+  
+  img {
+    border-radius: 8px;
+     width: 100%;
+  }
 }

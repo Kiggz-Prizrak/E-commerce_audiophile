@@ -1,8 +1,12 @@
+import Image from './Image'
+
 const PresentationSection = () => {
   return (
     <section className="presentationSection-container">
-      <div className="prensation-text">
-        <h2>Bringing you the best audio gear</h2>
+      <div className="presentationSection-text">
+        <h2>
+          Bringing you the <mark>best</mark> audio gear
+        </h2>
         <p>
           Located at the heart of New York City, Audiophile is the premier store
           for high end headphones, earphones, speakers, and audio accessories.
@@ -12,7 +16,7 @@ const PresentationSection = () => {
           best place to buy your portable audio equipment.
         </p>
       </div>
-      <img src="" alt="" />
+      <Image image="image-best-gear.jpg" link="shared" className="" />
     </section>
   );
 }

@@ -1,0 +1,99 @@
+.HomeProductBanner1 {
+  margin: 25px 0px;
+  width: 100%;
+  height: 560px;
+  background: $primary_color;
+  border-radius: 8px;
+  @include flex_arround;
+  overflow: hidden;
+
+  .HomeProductBanner1-image-container {
+    position: relative;
+    @include flex_midle;
+
+    object-fit: cover;
+    width: 100%;
+    max-width: 565px;
+    height: 100%;
+    bottom: -9%;
+    left: 0%;
+
+    z-index: 1;
+
+    picture {
+      position: absolute;
+    }
+
+    .HomeProductBanner1-image {
+      width: 410.23px;
+      height: 493px;
+    }
+    span {
+      position: absolute;
+      top: -100px;
+    }
+  }
+
+  .HomeProductBanner1-text {
+    z-index: 2;
+    h1,
+    p {
+      color: white;
+    }
+    max-width: 349px;
+    width: 100%;
+    button {
+      margin: 20px 0px;
+    }
+  }
+}
+
+.homeProductBanner2 {
+  margin: 25px 0px;
+  border-radius: 8px;
+  contain: strict;
+  height: 320px;
+  width: 100%;
+  position: relative;
+  @include flex_separation;
+
+  .homeProductBanner2-content {
+    position: absolute;
+    min-width: 270px;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.homeProductBanner3 {
+  width: 100%;
+  @include flex_separation;
+  flex-wrap: wrap;
+
+  .homeProductBanner3-content {
+    overflow: hidden;
+    border-radius: 8px;
+    width: 100%;
+    min-width: 270px;
+    max-width: 540px;
+    margin: 20px 0px;
+    
+    background-color: $light-grey;
+    height: 320px;
+    @include flex_arround;
+  }
+
+  picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .homeProductBanner3-text {
+    max-width: 300px;
+    width: 100%;
+  }
+}

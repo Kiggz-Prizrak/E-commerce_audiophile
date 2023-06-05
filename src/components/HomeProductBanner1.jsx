@@ -22,7 +22,7 @@ const HomeProductBanner1 = () => {
           Upgrade to premium speakers that are phenomenally built to deliver
           truly remarkable sound.
         </p>
-        <Button link="ZX9SPEAKER" className="button-black"
+        <Button link="article/2" className="button-black"
         />
       </div>
     </div>

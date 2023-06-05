@@ -1,6 +1,8 @@
 header {
-  background-color: black;
+  background-color: #101010c2;
   width: 100%;
+  position: fixed;
+    z-index: 3;
   @include flex_midle;
 
   button {
