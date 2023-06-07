@@ -6,7 +6,7 @@ const CategoryMenuCard = ({ image, category }) => {
       <img src={image} alt="" />
       <div className="homeCategoryCard-content">
         <h6>{category}</h6>
-        <Button2 link={category} />
+        <Button2 link={`category/${category}`} />
       </div>
     </li>
   );

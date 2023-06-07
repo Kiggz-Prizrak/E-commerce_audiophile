@@ -1,8 +1,9 @@
 header {
-  background-color: #101010c2;
+  background-color: #101010;
   width: 100%;
-  position: fixed;
-    z-index: 3;
+  // position: fixed;
+  z-index: 3;
+
   @include flex_midle;
 
   button {
@@ -22,4 +23,3 @@ header {
 .cart-button {
   display: none;
 }
-

@@ -45,7 +45,7 @@
   border: none;
   background-color: transparent;
   padding: 0;
-  margin:  15px 0px ;
+  margin: 15px 0px;
   max-width: 57px;
   width: 100%;
   @include flex_separation;
@@ -54,4 +54,42 @@
   &:hover {
     color: $primary_color;
   }
+}
+
+.buttonBack-container {
+  margin: 20px 0px;
+  width: 100%;
+  left: 0px;
+  .buttonBack {
+    border: none;
+    background: none;
+    color: black;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+
+    mix-blend-mode: normal;
+    opacity: 0.5;
+
+    &:hover {
+      color: $primary_color;
+      opacity: 1;
+    }
+  }
+}
+
+.buttonQuantity-container {
+  width: 120px;
+  height: 48px;
+  background-color: $light-grey;
+  @include flex_arround;
+  margin-right: 20px;
+  button {
+    margin: 0;
+    border: none;
+    background: none;
+    @include flex_midle;
+  }
+  
 }

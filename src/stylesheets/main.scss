@@ -12,9 +12,12 @@
   'base/helpers';
 
   @import
+  'components/articleGallery',
+  'components/articleDescription',
+  'components/articleSection',
   'components/categoryArticle',
   'components/categoryArticlesList',
-  'components/articleDescription',
+  'components/productPresentation',
   'components/heros',
   'components/homeProductBanner',
   'components/presentationSection',
@@ -31,7 +34,6 @@
   'layout/body';
 
   @import
-
   'pages/home';
 
 

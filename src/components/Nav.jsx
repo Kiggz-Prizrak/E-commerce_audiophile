@@ -6,9 +6,9 @@ const Nav = () => {
       <NavLink to="/" className="home-link">
         HOME
       </NavLink>
-      <NavLink to="/headphones">HEADPHONES</NavLink>
-      <NavLink to="/speakers">SPEAKERS</NavLink>
-      <NavLink to="/earphones">EARPHONES</NavLink>
+      <NavLink to="/category/headphones">HEADPHONES</NavLink>
+      <NavLink to="/category/speakers">SPEAKERS</NavLink>
+      <NavLink to="/category/earphones">EARPHONES</NavLink>
     </nav>
   );
 };

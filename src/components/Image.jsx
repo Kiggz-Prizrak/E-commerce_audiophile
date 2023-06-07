@@ -23,6 +23,8 @@ const Image = ({ image, link, className }) => {
           }/images/${link}/mobile/${image}`}
         />
 
+        
+
         <img
           className={className}
           src="elva-800w.jpg"

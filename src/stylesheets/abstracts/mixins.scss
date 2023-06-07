@@ -17,6 +17,12 @@
     align-items: center;
 }
 
+@mixin flex_column_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 @mixin flex_arround {
   display: flex;
   justify-content: space-around;
@@ -27,3 +33,4 @@
   max-width: 1440px;
   width: 100%;
 }
+

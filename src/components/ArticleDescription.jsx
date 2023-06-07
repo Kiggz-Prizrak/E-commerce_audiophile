@@ -1,16 +1,28 @@
-import Button from "./button/Button";
-
-const ArticleDescription = ({ isNew, title, description, link }) => {
-    
+const ArticleDescription = ({ description, list }) => {
+  console.log(list);
   return (
     <div className="articleDescription-container">
-      {isNew ? <p className="overline"> new product </p> : ""}
-
-      <h1>{title}</h1>
-      <p>{description}</p>
-      <Button link={link} className="button-orange" />
+      <div className="articleDescription-text">
+        <h3>features</h3>
+        <p>{description}</p>
+      </div>
+      <div>
+        <div className="articleDescription-list">
+          <h3>In the box</h3>
+          <ul>
+            {list.map((e, i) => {
+              return (
+                <li key={i}>
+                  <p className="item-quantity">{e?.quantity}x</p>
+                  <p>{e?.item}</p>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default ArticleDescription
+export default ArticleDescription;

@@ -1,15 +1,13 @@
-import Image from "./Image"
-import ArticleDescription from "./ArticleDescription"
+import Image from "./Image";
+import ProductPresentation from "./ProductPresentation";
 
-const CategoryArticle = ({isNew, title, id, description, image, slug}) => {
-
+const CategoryArticle = ({ isNew, title, id, description, image, slug }) => {
   return (
     <>
-      
-        <Image image={image} link={`product-${slug}`} />
-      
+      <Image image={image} link={`product-${slug}`} />
+
       <div className="CategoryArticle-description">
-        <ArticleDescription
+        <ProductPresentation
           isNew={isNew}
           title={title}
           description={description}
@@ -18,6 +16,6 @@ const CategoryArticle = ({isNew, title, id, description, image, slug}) => {
       </div>
     </>
   );
-}
+};
 
-export default CategoryArticle
+export default CategoryArticle;

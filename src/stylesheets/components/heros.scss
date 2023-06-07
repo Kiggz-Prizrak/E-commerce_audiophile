@@ -33,8 +33,9 @@
 .categoryHero {
   @include flex_midle;
   width: 100%;
-  padding-top: 97px;
   background-color: black ;
+  
+  margin-bottom: 50px;
   height: 336px;
   h2 {
     color: white;

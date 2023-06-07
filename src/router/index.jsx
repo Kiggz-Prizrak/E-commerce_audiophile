@@ -29,7 +29,7 @@ const router = createBrowserRouter([
         element: <Checkout />,
       },
       {
-        path: "/:category",
+        path: "/category/:category",
         element: <Category />,
         loader: ({ params }) => {
           return getArticlesFromCategory(params.category);
