@@ -1,0 +1,13 @@
+.suggestionItem-container {
+  @include flex_column;
+  margin: $margin_column;
+  
+  img {
+    margin: $margin_column;
+    max-width: 350px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+}

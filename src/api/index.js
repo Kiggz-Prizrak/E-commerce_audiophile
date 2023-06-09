@@ -20,4 +20,16 @@ const getOneArticles = (id) => {
     .catch((error) => console.log(error));
 }
 
-export { getAllArticles, getOneArticles, getArticlesFromCategory };
+const getArticleIdByName = (title) => {
+   return fetch(`${import.meta.env.VITE_API_HOST}${ENDPOINT_PRODUCT}`)
+   .then((res) => res.json())
+    .then((res) => res.find((res) => res.title === title))
+    .then((res) => res.id)
+} 
+
+export {
+  getAllArticles,
+  getOneArticles,
+  getArticlesFromCategory,
+  getArticleIdByName,
+};

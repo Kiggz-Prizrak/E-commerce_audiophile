@@ -6,11 +6,11 @@ import ButtonBack from "../components/button/ButtonBack";
 import ArticleSection from "../components/ArticleSection";
 import ArticleDescription from "../components/ArticleDescription";
 import ArticleGallery from "../components/ArticleGallery";
+import SuggestionList from "../components/SuggestionList";
 
 const Article = () => {
   const article = useLoaderData();
-  console.log(article);
-
+  
   return (
     <div className="page-container">
       <div className="page-content">
@@ -22,6 +22,7 @@ const Article = () => {
           price={article.price.toFixed(2)}
           slug={article.slug}
           image={article.image.desktop.split("/").pop()}
+          id={article.id}
         />
 
         <ArticleDescription
@@ -29,6 +30,7 @@ const Article = () => {
           list={article.includes}
         />
         <ArticleGallery gallery={article.gallery} slug={article.slug} />
+        <SuggestionList list={article.others}/>
         <CategoryMenu />
         <PresentationSection />
       </div>

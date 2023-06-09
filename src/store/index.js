@@ -15,9 +15,8 @@ import {
 
 const persistConfig = {
   key: "root",
-  storage
-}
-
+  storage,
+};
 const persistedReducer = persistReducer(persistConfig, cartReducer);
 
 export const store = configureStore({

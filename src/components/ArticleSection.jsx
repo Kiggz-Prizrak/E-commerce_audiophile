@@ -1,15 +1,28 @@
 import { useState } from "react";
-import Image from "./Image";
+import { useDispatch } from "react-redux";
 
+import { addToCart } from "../store/cartSlice";
+import productBuilder from "../store/productBuilder";
 
 import ButtonQuantity from "./button//ButtonQuantity";
-import ButtonSubmit from "./button/ButtonSubmit";
+import Image from "./Image";
 
-const ArticleSection = ({ isNew, title, description, price, slug, image }) => {
+const ArticleSection = ({
+  isNew,
+  title,
+  description,
+  price,
+  slug,
+  image,
+  id,
+}) => {
   const [articleQuantity, setArticleQuantity] = useState(0);
+  const [errorQuantity, setErrorQuantity] = useState("");
+  const dispatch = useDispatch();
+
   return (
     <section className="articleSection-container">
-      <Image link={`product-${slug}`} image={image}/>
+      <Image link={`product-${slug}`} image={image} />
       <div className="articleDescription-content">
         {isNew ? <p className="overline"> new product </p> : ""}
         <h2>{title}</h2>
@@ -20,8 +33,26 @@ const ArticleSection = ({ isNew, title, description, price, slug, image }) => {
             articleQuantity={articleQuantity}
             setArticleQuantity={setArticleQuantity}
           />
-          <ButtonSubmit title="ADD TO CART" />
+ 
+          <button
+            className="button-orange"
+            onClick={() => {
+              if (articleQuantity > 0) {
+                setErrorQuantity("");
+                dispatch(
+                  addToCart(
+                    productBuilder(id, price, articleQuantity, title, image)
+                  )
+                );
+              } else {
+                setErrorQuantity("veuillez sélectionner une quantité");
+              }
+            }}
+          >
+            add to cart
+          </button>
         </div>
+        <p>{errorQuantity}</p>
       </div>
     </section>
   );

@@ -1,7 +1,6 @@
 import Image from "./Image"
 
 const ArticleGallery = ({gallery, slug} ) => {
-  console.log(gallery)
   return (
     <div className="ArticleGallery-container">
       <div className="ArticleGallery-column">

@@ -1,0 +1,9 @@
+.suggestionList-container {
+  width: 100%;
+
+  ul {
+    width: 100%;
+    flex-wrap: wrap;
+    @include flex_separation;
+  }
+}

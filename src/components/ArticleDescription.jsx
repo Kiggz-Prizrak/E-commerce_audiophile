@@ -1,5 +1,4 @@
 const ArticleDescription = ({ description, list }) => {
-  console.log(list);
   return (
     <div className="articleDescription-container">
       <div className="articleDescription-text">

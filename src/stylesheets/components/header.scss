@@ -1,7 +1,7 @@
 header {
   background-color: #101010;
   width: 100%;
-  // position: fixed;
+  position: fixed;
   z-index: 3;
 
   @include flex_midle;
@@ -21,5 +21,16 @@ header {
 }
 
 .cart-button {
-  display: none;
+  position: relative;
+  .cart-quantity-label {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    color: white;
+    border-radius: 100%;
+    background-color: $primary_color;
+    top: -12px;
+    right: -6px;
+    @include flex_midle
+  }
 }

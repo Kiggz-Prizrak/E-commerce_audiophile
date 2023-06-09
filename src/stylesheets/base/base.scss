@@ -6,6 +6,14 @@ button:hover {
   cursor: pointer;
 }
 
+button {
+  margin: $margin_column;
+}
+
 ul {
   padding: 0;
 }
+// picture {
+//   width: 100%;
+//   height: 100%;
+// }
