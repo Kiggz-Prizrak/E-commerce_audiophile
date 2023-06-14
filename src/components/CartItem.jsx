@@ -11,12 +11,12 @@ import {
   removeItem,
 } from "../store/cartSlice";
 
-const CartItem = ({ id, image, name, price, productQuantity }) => {
+const CartItem = ({ id, image, name, price, productQuantity, link }) => {
   const dispatch = useDispatch();
   return (
     <>
-      <Image />
-      <div>
+      <Image image={image} link={link}/>
+      <div className="cartItem-text">
         <p>{name}</p>
         <p className="subtitle">{price} $</p>
       </div>

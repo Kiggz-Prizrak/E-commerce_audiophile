@@ -1,11 +1,13 @@
 import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
-import ButtonSubmit from "./button/ButtonSubmit";
 import CartItem from "./CartItem";
 
 import { clearCart } from "../store/cartSlice";
 
-const CartModal = () => {
+const CartModal = ({ setCartIsOpen }) => {
+  
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
 
@@ -13,8 +15,6 @@ const CartModal = () => {
     (accumulator, item) => accumulator + item.price * item.productQuantity,
     0
   );
-
-  console.log(cart[0]);
 
   return (
     <div className="cartModal-background">
@@ -31,13 +31,14 @@ const CartModal = () => {
               <ul>
                 {cart.map((e) => {
                   return (
-                    <li>
+                    <li key={e.id} className="cartItem-container">
                       <CartItem
                         id={e.id}
                         image={e.image}
                         name={e.name}
                         price={e.price}
                         productQuantity={e.productQuantity}
+                        link={`product-${e.slug}`}
                       />
                     </li>
                   );
@@ -47,7 +48,15 @@ const CartModal = () => {
                 <p>TOTAL</p>
                 <h6>{totalPrice} $</h6>
               </div>
-              <ButtonSubmit title='checkout' />
+              <button
+                className='button-orange'
+                onClick={() => {
+                  setCartIsOpen(false)
+                  navigate(`/checkout`)
+                }}
+              >
+               checkout
+              </button>
             </>
           ) : (
             <p>Votre panier est vide +</p>

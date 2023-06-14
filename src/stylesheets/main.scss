@@ -2,14 +2,11 @@
 
 @import
   'abstracts/variables',
-  'abstracts/functions',
   'abstracts/mixins';
 
 @import
   'base/base',
-  'base/fonts',
-  'base/typography',
-  'base/helpers';
+  'base/fonts';
 
   @import
   'components/cartItem',

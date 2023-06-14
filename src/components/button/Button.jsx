@@ -1,13 +1,13 @@
 import { useNavigate } from "react-router-dom";
 
-const Button1 = ({ link, className}) => {
+const Button = ({ link, className, title}) => {
   const navigate = useNavigate();
 
   return (
     <button className={className} onClick={() => navigate(`/${link}`)}>
-      SEE PRODUCT
+      {title || "SEE PRODUCT"}
     </button>
   );
 };
 
-export default Button1;
+export default Button;

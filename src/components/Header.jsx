@@ -26,13 +26,17 @@ export default function Header() {
             className="cart-button"
             onClick={() => setCartIsOpen(!cartIsOpen)}
           >
-            {cart.length ?<span className="cart-quantity-label">{cart.length}</span> : '' }
-            
+            {cart.length ? (
+              <span className="cart-quantity-label">{cart.length}</span>
+            ) : (
+              ""
+            )}
+
             <Cart />
           </button>
         </div>
       </header>
-      {cartIsOpen ? <CartModal /> : ""}
+      {cartIsOpen ? <CartModal setCartIsOpen={setCartIsOpen} /> : ""}
     </>
   );
 }

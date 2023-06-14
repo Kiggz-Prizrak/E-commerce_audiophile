@@ -41,7 +41,7 @@ const ArticleSection = ({
                 setErrorQuantity("");
                 dispatch(
                   addToCart(
-                    productBuilder(id, price, articleQuantity, title, image)
+                    productBuilder(id, price, articleQuantity, title, image, slug)
                   )
                 );
               } else {

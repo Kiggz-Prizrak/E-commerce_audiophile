@@ -1,10 +1,11 @@
-const productBuilder = (id, price, productQuantity, name, image) => {
+const productBuilder = (id, price, productQuantity, name, image, slug) => {
   return {
     id,
     price,
     productQuantity,
     name,
     image,
+    slug,
   };
 };
 
