@@ -13,12 +13,16 @@ body {
 .page-container {
   width: 100%;
   @include flex_midle;
-  @include flex_column
+  @include flex_column;
+  padding-top: 120px;
+  padding-bottom: 50px;
 }
 .page-content {
   max-width: 1100px;
   width: 100%;
-  @include flex_midle;
+  // @include flex_midle;
+  display: flex;
+  justify-content: center;
   flex-direction: column;
   
 }

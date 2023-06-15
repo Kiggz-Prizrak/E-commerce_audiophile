@@ -1,0 +1,22 @@
+.checkoutRecapItem-container {
+  @include flex_separation;
+  margin-top: 15px;
+
+  img {
+    width: 64px;
+    border-radius: 8px;
+  }
+  .checkoutRecapItem-content {
+    display: flex;
+  }
+
+
+  .checkoutRecapItem-text {
+    width: 100%;
+    margin: 0 10px;
+    p {
+      margin: 0;
+    }
+  }
+
+}

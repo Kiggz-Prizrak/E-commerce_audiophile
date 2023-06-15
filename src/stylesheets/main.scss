@@ -9,6 +9,8 @@
   'base/fonts';
 
   @import
+  'components/checkoutRecapItem',
+  'components/checkoutForm',
   'components/cartItem',
   'components/cartContainer',
   'components/suggestionItem',
@@ -35,6 +37,7 @@
   'layout/body';
 
   @import
+  'pages/checkout',
   'pages/home';
 
 

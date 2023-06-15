@@ -4,17 +4,15 @@ import CheckoutForm from "../components/CheckoutForm";
 import CheckoutValidationModal from "../components/CheckoutValidationModal";
 
 const Checkout = () => {
-
   const [isValid, setIsValid] = useState(false);
 
   return (
-    <div>
-      <h1>chechout</h1>
-      <ButtonBack />
-      <div>
+    <div className="page-container checkout-container">
+      <div className="page-content">
+        <ButtonBack />
         <CheckoutForm setIsValid={setIsValid} />
+        {isValid ? <CheckoutValidationModal /> : ""}
       </div>
-      {isValid ? <CheckoutValidationModal /> : ""}
     </div>
   );
 };

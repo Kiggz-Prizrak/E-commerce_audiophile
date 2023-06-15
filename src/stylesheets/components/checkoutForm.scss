@@ -1,0 +1,81 @@
+.checkoutForm {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.checkoutForm-container {
+  background-color: white;
+  max-width: 730px;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+.checkoutForm-content {
+  margin: 30px;
+}
+
+.labelContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  max-width: 309px;
+  width: 100%;
+  min-width: 280px;
+  margin-top: 5px;
+}
+
+.address-label {
+  max-width: none;
+  width: 100%;
+}
+
+.checkForm-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.checkForm-radio-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .checkForm-radio-container {
+    @include flex_column;
+    flex-wrap: wrap;
+
+    .checkForm-radio-label {
+      display: flex;
+      align-items: center;
+      border: 1px solid #cfcfcf;
+      border-radius: 8px;
+      padding: 12px 0px;
+      background: none;
+      margin-top: 9px;
+      width: 100%;
+    }
+  }
+}
+
+.checkForm-recap-container {
+  max-width: 350px;
+  width: 100%;
+  background-color: white;
+  border-radius: 8px;
+  height: fit-content;
+}
+
+.checkForm-submit {
+  background-color: $primary_color;
+  border: none;
+  border-radius: 0;
+  width: 100%;
+  height: 48px;
+  color: white;
+  margin: 0;
+}

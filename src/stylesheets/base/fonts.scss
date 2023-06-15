@@ -65,6 +65,29 @@ p {
   line-height: 25px;
 }
 
+label {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.214286px;
+
+  color: #000000;
+}
+
+input::placeholder {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: -0.25px;
+
+  color: #000000;
+
+  mix-blend-mode: normal;
+  opacity: 0.4;
+}
+
 a {
   color: white;
   font-weight: bold;
