@@ -1,13 +1,13 @@
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { useSelector } from "react-redux";
 
 import CheckoutRecapItem from "./CheckoutRecapItem";
 
 const CheckoutForm = ({ setIsValid }) => {
-
   const [formDatas, setFormDatas] = useState({
     billing: {
       fullName: "",
@@ -26,11 +26,12 @@ const CheckoutForm = ({ setIsValid }) => {
       eMonayPin: "",
     },
   });
-
   const [isEmoney, setIsEmoney] = useState(false);
 
   const { register, handleSubmit, control, formState } = useForm();
   const { errors } = formState;
+
+  const navigate = useNavigate();
 
   const subForm = (data) => {
     console.log(data);
@@ -45,6 +46,10 @@ const CheckoutForm = ({ setIsValid }) => {
   };
 
   const cart = useSelector((state) => state.cart);
+  const totalPrice = cart.reduce(
+    (accumulator, item) => accumulator + item.price * item.productQuantity,
+    0
+  );
 
   return (
     <>
@@ -61,7 +66,7 @@ const CheckoutForm = ({ setIsValid }) => {
               <div className="labelContainer">
                 <label
                   htmlFor="name"
-                  className={errors.name?.message ? "errorMessage" : ""}
+                  
                 >
                   Name
                 </label>
@@ -85,7 +90,6 @@ const CheckoutForm = ({ setIsValid }) => {
               <div className="labelContainer">
                 <label
                   htmlFor="email"
-                  className={errors.email?.message ? "errorMessage" : ""}
                 >
                   E-mail
                 </label>
@@ -108,7 +112,6 @@ const CheckoutForm = ({ setIsValid }) => {
               <div className="labelContainer">
                 <label
                   htmlFor="phone"
-                  className={errors.phone?.message ? "errorMessage" : ""}
                 >
                   Phone
                 </label>
@@ -134,7 +137,6 @@ const CheckoutForm = ({ setIsValid }) => {
               <div className="labelContainer address-label">
                 <label
                   htmlFor="adress"
-                  className={errors.adress?.message ? "errorMessage" : ""}
                 >
                   Adress
                 </label>
@@ -157,7 +159,6 @@ const CheckoutForm = ({ setIsValid }) => {
               <div className="labelContainer">
                 <label
                   htmlFor="zipCode"
-                  className={errors.zipCode?.message ? "errorMessage" : ""}
                 >
                   ZIP Code
                 </label>
@@ -180,7 +181,6 @@ const CheckoutForm = ({ setIsValid }) => {
               <div className="labelContainer">
                 <label
                   htmlFor="city"
-                  className={errors.city?.message ? "errorMessage" : ""}
                 >
                   City
                 </label>
@@ -203,7 +203,6 @@ const CheckoutForm = ({ setIsValid }) => {
               <div className="labelContainer">
                 <label
                   htmlFor="country"
-                  className={errors.country?.message ? "errorMessage" : ""}
                 >
                   Country
                 </label>
@@ -230,7 +229,11 @@ const CheckoutForm = ({ setIsValid }) => {
               <div className="checkForm-radio-section">
                 <p>Payement Method</p>
                 <div className="checkForm-radio-container labelContainer">
-                  <div className="checkForm-radio-label">
+                  <div
+                    className={`checkForm-radio-label ${
+                      errors.option?.message ? "errorOption" : ""
+                    }`}
+                  >
                     <input
                       onClick={() => setIsEmoney(true)}
                       type="radio"
@@ -240,7 +243,11 @@ const CheckoutForm = ({ setIsValid }) => {
                     />
                     <label>e-Money</label>
                   </div>
-                  <div className="checkForm-radio-label">
+                  <div
+                    className={`checkForm-radio-label ${
+                      errors.option?.message ? "errorOption" : ""
+                    }`}
+                  >
                     <input
                       onClick={() => setIsEmoney(false)}
                       type="radio"
@@ -323,10 +330,7 @@ const CheckoutForm = ({ setIsValid }) => {
             <ul>
               {cart.map((e) => {
                 return (
-                  <li
-                    key={e.id}
-                    className="checkoutRecapItem-container"
-                  >
+                  <li key={e.id} className="checkoutRecapItem-container">
                     <CheckoutRecapItem
                       id={e.id}
                       image={e.image}
@@ -339,6 +343,24 @@ const CheckoutForm = ({ setIsValid }) => {
                 );
               })}
             </ul>
+            <div className="checkoutForm-prices-container">
+              <div>
+                <p>TOTAL</p>
+                <h6>$ {totalPrice}</h6>
+              </div>
+              <div>
+                <p>SHIPPING</p>
+                <h6>$ 50</h6>
+              </div>
+              <div>
+                <p>{"VAT (INCLUDED)"} </p>
+                <h6>$ {totalPrice * 0.2}</h6>
+              </div>
+              <div>
+                <p>GRAND TOTAL</p>
+                <h6 className="checkout-total-price">$ {totalPrice + 50}</h6>
+              </div>
+            </div>
             <button type="submit" className="checkForm-submit ">
               continue & pay
             </button>

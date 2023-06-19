@@ -1,6 +1,5 @@
 .checkoutRecapItem-container {
   @include flex_separation;
-  margin-top: 15px;
 
   img {
     width: 64px;
@@ -8,6 +7,7 @@
   }
   .checkoutRecapItem-content {
     display: flex;
+    align-items: center;
   }
 
 
@@ -19,4 +19,28 @@
     }
   }
 
+}
+
+.checkoutForm-prices-container {
+  div {
+    @include flex_separation;
+  }
+  .checkout-total-price {
+    color : $primary_color;
+  }
+}
+
+.errorMessage {
+
+   color : red 
+  
+}
+
+.errorInput {
+  border: 1px solid red !important;
+  color: red;
+}
+
+.errorOption {
+  border:  1px solid red !important; ;
 }

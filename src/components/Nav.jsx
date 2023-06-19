@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 
-const Nav = () => {
+const Nav = ({ navIsOpen }) => {
   return (
-    <nav>
+    <nav className={navIsOpen ? "nav-open" : "nav-closed"}>
       <NavLink to="/" className="home-link">
         HOME
       </NavLink>

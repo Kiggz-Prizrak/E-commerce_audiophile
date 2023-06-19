@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import Logo from "../assets/icons/Logo";
 import Cart from "../assets/icons/Cart";
 import Burger from "../assets/icons/Burger";
+import CloseIcon from "../assets/icons/CloseIcon";
 
 import Nav from "./Nav";
 import CartModal from "./CartModal";
@@ -12,16 +13,32 @@ export default function Header() {
 
   const cart = useSelector((state) => state.cart);
   const [cartIsOpen, setCartIsOpen] = useState(false);
+  const [navIsOpen, setNavIsOpen] = useState(false);
 
   return (
     <>
       <header>
         <div className="header-container">
-          <button className="cart-button">
-            <Burger />
-          </button>
+          <div className="nav-button-container">
+            <button
+              className={
+                navIsOpen ? "button-nav-invisible" : "button-nav-visible"
+              }
+              onClick={() => setNavIsOpen(true)}
+            >
+              <Burger />
+            </button>
+            <button
+              className={
+                navIsOpen ? "button-nav-visible" : "button-nav-invisible"
+              }
+              onClick={() => setNavIsOpen(false)}
+            >
+              x
+            </button>
+          </div>
           <Logo />
-          <Nav />
+          <Nav navIsOpen={navIsOpen} />
           <button
             className="cart-button"
             onClick={() => setCartIsOpen(!cartIsOpen)}

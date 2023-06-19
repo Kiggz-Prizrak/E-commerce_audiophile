@@ -1,6 +1,5 @@
 const Image = ({ image, link, className }) => {
 
-
   return (
     <>
       <picture>
@@ -22,9 +21,6 @@ const Image = ({ image, link, className }) => {
             import.meta.env.VITE_API_HOST
           }/images/${link}/mobile/${image}`}
         />
-
-        
-
         <img
           className={className}
           src="elva-800w.jpg"

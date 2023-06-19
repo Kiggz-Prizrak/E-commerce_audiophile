@@ -2,7 +2,56 @@ nav {
   @include flex_separation;
   width: 100%;
   max-width: 430px;
+  margin: 0 5px;
   .active {
     border-bottom: solid 1px white;
   }
+  a {
+    margin: 0 5px;
+  }
+}
+
+.button-nav-visible {
+  display: flex;
+}
+
+.button-nav-invisible {
+  display: none;
+}
+
+@media screen and (max-width: 550px) {
+ 
+  nav {
+    display: none;
+  }
+  .nav-closed {
+    display: none;
+  }
+  .nav-open {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    align-items: flex-start;
+    justify-content: flex-start;
+    top: 100%;
+    width: 70%;
+    background-color: #101010;
+    margin: 0;
+    height: 100vh;
+    .active {
+      color: $primary_color
+    }
+    a {
+      width: 100%;
+    margin:  0px;
+    font-size: 15px;
+    padding: 45px 25px;
+    border-top: solid 1px white;
+  }
+  }
+
+  
 }

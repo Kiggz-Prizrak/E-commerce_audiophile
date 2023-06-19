@@ -31,6 +31,23 @@ header {
     background-color: $primary_color;
     top: -12px;
     right: -6px;
-    @include flex_midle
+    @include flex_midle;
   }
+}
+
+.nav-button-container {
+  display: none;
+  button {
+    color:  white;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .nav-button-container {
+    display: block;
+    z-index: 3;
+  }
+
 }
