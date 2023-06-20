@@ -7,3 +7,13 @@
     @include flex_separation;
   }
 }
+
+@media screen and (max-width: 550px) {
+  .suggestionList-container {
+    text-align: center;
+    ul {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

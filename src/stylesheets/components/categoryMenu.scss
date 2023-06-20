@@ -3,3 +3,13 @@
   width: 100%;
   flex-wrap: wrap;
 }
+
+@media screen and (max-width: 800px) {
+.CategoryMenu-container {
+  @include flex_separation_responsive;
+  li {
+    max-width: 90%;
+    margin: 45px 0;
+  }
+}
+}

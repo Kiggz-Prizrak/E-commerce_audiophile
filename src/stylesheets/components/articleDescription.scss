@@ -29,3 +29,18 @@
     }
   }
 }
+
+
+
+@media screen and (max-width: 995px)  {
+.articleDescription-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 95%;
+  .articleDescription-text {
+  max-width: 90%;
+    
+  }
+}
+
+}

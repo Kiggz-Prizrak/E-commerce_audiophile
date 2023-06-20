@@ -18,3 +18,23 @@
      width: 100%;
   }
 }
+
+@media screen and (max-width: 550px) {
+  
+
+  .presentationSection-container {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    .presentationSection-text {
+      max-width: 90%;
+    }
+    img {
+      height: 300px;
+      max-width: 90%;
+      object-fit: cover;
+    }
+  }
+}

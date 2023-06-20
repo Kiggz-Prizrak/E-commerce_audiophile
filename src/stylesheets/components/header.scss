@@ -38,9 +38,14 @@ header {
 .nav-button-container {
   display: none;
   button {
-    color:  white;
+    color: white;
     font-weight: bold;
     font-size: 20px;
+    &:active {
+      transform: rotate(-0.25turn);
+      transition: all 0.3s ease-in-out;
+      transform: scale(1.2);
+    }
   }
 }
 
@@ -49,5 +54,4 @@ header {
     display: block;
     z-index: 3;
   }
-
 }
