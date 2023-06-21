@@ -7,8 +7,7 @@
 
 .checkoutForm-container {
   background-color: white;
-  max-width: 730px;
-  width: 100%;
+  width: 64%;
   border-radius: 8px;
   margin-bottom: 25px;
 }
@@ -63,8 +62,7 @@
 }
 
 .checkForm-recap-container {
-  max-width: 350px;
-  width: 100%;
+  width: 33%;
   background-color: white;
   border-radius: 8px;
   height: fit-content;
@@ -78,4 +76,39 @@
   height: 48px;
   color: white;
   margin: 0;
+}
+
+@media screen and (max-width: 775px) {
+  .checkoutForm {
+    justify-content: center;
+  }
+  .checkForm-section {
+    justify-content: center;
+  }
+  .checkForm-radio-section {
+    justify-content: center;
+  }
+  .checkForm-recap-container {
+    width: 90%;
+  }
+  .checkoutForm-container {
+    width: 90%;
+  }
+
+  .labelContainer {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .checkoutValidationModal-container {
+    text-align: center;
+    
+    .checkoutRecapItem-card-container div {
+      width: 100%;
+      max-width: none;
+      padding: 0 10%;
+    }
+
+  }
 }

@@ -1,16 +1,22 @@
 import { NavLink } from "react-router-dom";
 
-const Nav = ({ navIsOpen }) => {
+const Nav = ({ setNavIsOpen, navIsOpen }) => {
   return (
     <nav className={navIsOpen ? "nav-open" : "nav-closed"}>
-      <NavLink to="/" className="home-link">
+      <NavLink to="/" className="home-link" onClick={() => setNavIsOpen(false)}>
         HOME
       </NavLink>
-      <NavLink to="/category/headphones">HEADPHONES</NavLink>
-      <NavLink to="/category/speakers">SPEAKERS</NavLink>
-      <NavLink to="/category/earphones">EARPHONES</NavLink>
+      <NavLink to="/category/headphones" onClick={() => setNavIsOpen(false)}>
+        HEADPHONES
+      </NavLink>
+      <NavLink to="/category/speakers" onClick={() => setNavIsOpen(false)}>
+        SPEAKERS
+      </NavLink>
+      <NavLink to="/category/earphones" onClick={() => setNavIsOpen(false)}>
+        EARPHONES
+      </NavLink>
     </nav>
   );
 };
 
-export default Nav
+export default Nav;

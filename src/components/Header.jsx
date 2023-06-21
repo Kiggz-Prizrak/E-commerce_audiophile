@@ -38,7 +38,7 @@ export default function Header() {
             </button>
           </div>
           <Logo />
-          <Nav navIsOpen={navIsOpen} />
+          <Nav setNavIsOpen={setNavIsOpen} navIsOpen={navIsOpen} />
           <button
             className="cart-button"
             onClick={() => setCartIsOpen(!cartIsOpen)}
