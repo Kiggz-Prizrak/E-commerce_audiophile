@@ -15,7 +15,13 @@ const CartItem = ({ id, image, name, price, productQuantity, link }) => {
   const dispatch = useDispatch();
   return (
     <>
-      <Image image={image} link={link}/>
+      <button
+        className="cartItem-remove-button"
+        onClick={() => dispatch(removeItem(id))}
+      >
+        X
+      </button>
+      <Image image={image} link={link} />
       <div className="cartItem-text">
         <p>{name}</p>
         <p className="subtitle">{price} $</p>

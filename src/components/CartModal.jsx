@@ -59,7 +59,7 @@ const CartModal = ({ setCartIsOpen }) => {
               </button>
             </>
           ) : (
-            <p>Votre panier est vide +</p>
+            <p>Votre panier est vide</p>
           )}
         </div>
       </div>

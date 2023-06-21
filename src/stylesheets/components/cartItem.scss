@@ -1,5 +1,6 @@
 .cartItem-container {
   @include flex_separation;
+  position: relative;
   img {
     width: 64px;
     border-radius: 8px;
@@ -15,5 +16,16 @@
       margin: 0;
     }
   }
-
+  .cartItem-remove-button {
+    position: absolute;
+    left: -15px;
+    top: -32px;
+    color: white;
+    font-weight: bold;
+    background-color: $primary_color;
+    border: none;
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+  }
 }
